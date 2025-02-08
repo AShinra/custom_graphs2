@@ -3,7 +3,7 @@ from matplotlib import pyplot
 import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
-
+from pathlib import Path
 
 
 st.set_page_config(page_title='Custom  Charts')
@@ -82,9 +82,10 @@ else:
         st.warning('No data to plot')
     
     save_to_png = st.button('Save to PNG')
+    result_file = Path(__file__).parent/'my_test.png'
     if save_to_png:
-        plt.savefig('test.png')
+        plt.savefig(result_file)
 
     result_file = open('test.png', 'rb')
-    _dl = st.download_button('Save to Image File', data='test.jpg', file_name='my_image.jpg')
+    _dl = st.download_button('Save to Image File', data=result_file, file_name='my_image.png')
     
