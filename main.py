@@ -81,9 +81,9 @@ else:
     except:
         st.warning('No data to plot')
     
-    save_to_png = st.button('Save to PNG')
-    result_file = Path(__file__).parent/'my_test.png'
-    if save_to_png:
+    save_to_jpg = st.button('Save to JPG')
+    result_file = Path(__file__).parent/'my_test.jpg'
+    if save_to_jpg:
         plt.savefig(result_file)
 
     try:
@@ -91,5 +91,5 @@ else:
     except:
         st.warning('No File to Download')
     else:
-        _dl = st.download_button('Save to Image File', data=result_file, file_name='my_image.png')
+        _dl = st.download_button('Save to Image File', data=result_file, file_name='my_image.jpg')
     
