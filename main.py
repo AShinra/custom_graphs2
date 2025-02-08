@@ -91,5 +91,5 @@ else:
     except:
         st.warning('No File to Download')
     else:
-        _dl = st.download_button('Save to Image File', data=result_file, file_name='my_image.jpg')
+        st.download_button('Save to Image File', data=result_file, file_name='my_image.jpg')
     
