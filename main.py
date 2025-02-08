@@ -86,6 +86,6 @@ else:
     if save_to_png:
         plt.savefig(result_file)
 
-    result_file = open('test.png', 'rb')
+    result_file = open(result_file, 'rb')
     _dl = st.download_button('Save to Image File', data=result_file, file_name='my_image.png')
     
