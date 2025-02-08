@@ -6,7 +6,7 @@ from setting import page_layout
 
 if __name__ == '__main__':
 
-    page_layout('wide')
+    page_layout('centered')
     
     selected = ''
     with st.sidebar:
@@ -20,5 +20,5 @@ if __name__ == '__main__':
                 icons=['bar-chart','pie-chart', 'graph-up']
             )
         
-    if selected == 'Bar':
+    if selected == 'Bar' and csv_file not in [None, '']:
         bar_chart(csv_file)
