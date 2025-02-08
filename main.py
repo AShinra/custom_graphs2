@@ -64,7 +64,7 @@ else:
     df_melted = new_df.melt(id_vars=["Date"], var_name="Brand", value_name="Count")
 
     # Set plot size and style
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(12, 7))
 
     # Create a bar plot
     my_plot=sns.barplot(data=df_melted, x="Date", y="Count", hue="Brand")
