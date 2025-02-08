@@ -4,12 +4,9 @@ import matplotlib.pyplot as plt
 import streamlit as st
 import pandas as pd
 
+
+
 st.set_page_config(page_title='Custom  Charts')
-
-
-
-
-# df = sns.load_dataset('titanic')
 
 _file = 'Sample CSV/Bar Data.csv'
 df = pd.read_csv(_file)
@@ -83,11 +80,11 @@ else:
         st.pyplot(plt)
     except:
         st.warning('No data to plot')
-
-
-    save_to_png = st.button('Save to JPG')
-    if save_to_png:
-        plt.savefig('test.jpg')
     
+    save_to_png = st.button('Save to PNG')
+    if save_to_png:
+        plt.savefig('test.png')
+
+    result_file = open('test.png', 'rb')
     _dl = st.download_button('Save to Image File', data='test.jpg', file_name='my_image.jpg')
     
